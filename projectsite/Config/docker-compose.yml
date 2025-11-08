@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    image: dorianoo/django-app:latest
+    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../:/app   # <-- map parent folder to /app
+    environment:
+      - DEBUG=1
+      - USE_SQLITE=true
+      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+
+# If you want a named volume for database or persistent storage, define it here:
+volumes:
+  django_data:
