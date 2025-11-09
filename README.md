@@ -29,7 +29,7 @@ docker --version
 
 ### 1️⃣ Clone this repository
 ```bash
-git clone https://github.com/<yourusername>/psusphere-docker.git
+git clone https://github.com/xamzzs/Docker-PSUSphere.git
 cd psusphere-docker/for_client
 ```
 
